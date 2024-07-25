@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    perspective: 1000px;
+}
+
+.contener {
+    position: relative;
+    perspective: 1000px;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #303ca7, #c2d1ec);
+    text-align: center;
+}
+
+.center-cards {
+    width: 70%;
+    height: 37%;
+    transform: translate(228px, 250px);
+    background-image: linear-gradient(to top, rgba(64, 64, 165, 0.644), rgba(160, 160, 209, 0.158));
+    border-radius: 15px;
+    box-shadow: 7px 7px 25px rgb(30, 30, 87);
+}
+
+.buttom-cards {
+    width: 70%;
+    height: 70px;
+    position: relative;
+    top: 350px;
+    left: 20%;
+    perspective: 1000px;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 3s;
+    cursor: pointer;
+}
+
+.sun,
+.sun2,
+.sunflower,
+.sunflower2,
+.parrot,
+.parrot2,
+.fish,
+.fish2,
+.boy,
+.boy2 {
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    padding: 20px;
+    float: left;
+    border-radius: 15px;
+}
+
+.sun,
+.sunflower,
+.parrot,
+.fish,
+.boy {
+    position: absolute;
+    background-image: linear-gradient(to top, #030c41, rgba(110, 110, 185, 0.651));
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+
+.sun2,
+.sunflower2,
+.parrot2,
+.fish2,
+.boy2 {
+    position: absolute;
+    background-image: linear-gradient(to top, #2f3349, rgba(191, 191, 238, 0.651));
+
+}
+
+.h2 {
+    color: rgb(175, 175, 179);
+}
+
+.card1 {
+    animation-name: text-sun;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+    transform: translate(0px, 0);
+
+}
+
+
+@keyframes text-sun {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(600px, -200px);
+    }
+
+}
+
+.sun:active {
+    transform: rotateY(180deg);
+}
+
+.card2 {
+    animation-name: text-sunflower;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+    transform: translate(200px, 0);
+}
+
+@keyframes text-sunflower {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(390px, -200px);
+    }
+}
+
+.sunflower:active {
+    transform: rotateY(180deg);
+}
+
+.card3 {
+    animation-name: text-parrot;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 15s;
+    transform: translate(400px, 0);
+}
+
+@keyframes text-parrot {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(810px, -200px);
+
+    }
+}
+
+.parrot:active {
+    transform: rotateY(180deg);
+}
+
+.card4 {
+    animation-name: text-fish;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    transform: translate(600px, 0);
+}
+
+@keyframes text-fish {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(170px, -200px);
+    }
+}
+
+.fish:active {
+    transform: rotateY(180deg);
+}
+
+.card5 {
+    animation-name: text-boy;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    transform: translate(800px, 0);
+
+}
+
+
+@keyframes text-boy {
+    from {
+        transform: translate();
+
+    }
+
+    to {
+        transform: translate(-50px, -200px);
+    }
+
+}
+
+.boy:active {
+    transform: rotateY(180deg);
+}
+
+.top-cards {
+
+    width: 70%;
+    position: relative;
+    top: -300px;
+    left: 15%;
+
+}
+
+.boy-image,
+.sun-image,
+.sunflower-image,
+.fish-image,
+.parrot-image {
+    float: left;
+    margin-left: 50px;
+    width: 150px;
+    height: 150px;
+}
+
+.boy-image {
+
+    background-image: url(../image/pngegg\ \(1\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: boy;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes boy {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(0, 200px);
+    }
+}
+
+.sun-image {
+    background-image: url(../image/pngegg\ \(2\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: sun;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+}
+
+@keyframes sun {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(10px, 200px);
+    }
+}
+
+.sunflower-image {
+    background-image: url(../image/pngegg\ \(3\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: sunflower;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+}
+
+@keyframes sunflower {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(15px, 200px);
+    }
+}
+
+.fish-image {
+    background-image: url(../image/pngegg\ \(4\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: fish;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
+
+@keyframes fish {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(10px, 200px);
+    }
+}
+
+.parrot-image {
+    background-image: url(../image/pngegg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-name: parrot;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 15s;
+}
+
+@keyframes parrot {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(50px, 200px);
+    }
+}
